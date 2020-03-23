@@ -2,39 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0524cc4b-7236-44fa-bbc5-d1a0598315d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/PokeStops.api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/PokeStops.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/PokeStops.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokeStops.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/Pixelmon-1.12.2-7.2.0-server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/CommandRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/CommandRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/PokeStops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/PokeStops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorAddDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorAddDrop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorAddPokeStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorAddPokeStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorClaimPokeStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorClaimPokeStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDelDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDelDrop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDelPokeStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDelPokeStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDropList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/commands/ExecutorDropList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/ConfigStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/ConfigStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/CoordStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/CoordStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/ItemStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/ItemStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PlayerPokeStopStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PlayerPokeStopStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PlayerStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PlayerStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PokeStopConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PokeStopConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PokeStopStruc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/PokeStopStruc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/config/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/enums/EnumPokeStopType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/enums/EnumPokeStopType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/ticker/ParticleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokestops/andwhat5/ticker/ParticleTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -87,7 +69,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'PokeStops'">
+  <component name="RunManager" selected="Gradle.PokeStops">
     <configuration name="PokeStops" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -99,7 +81,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="setupDecompWorkspace" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -130,8 +112,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'PokeStops'" />
         <item itemvalue="Gradle.PokeStops" />
+        <item itemvalue="Gradle.Tests in 'PokeStops'" />
       </list>
     </recent_temporary>
   </component>
@@ -168,30 +150,34 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="999" y="327" key="#PokeStops/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921277810" />
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584921254593">
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584923276553">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921254593" />
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584923276553" />
     <state x="1128" y="589" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584919589362">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1128" y="589" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584919589362" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1584921646888">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1584923939954">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921646888" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1584921646888">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584923939954" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1584923939954">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921646888" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1584921646887">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584923939954" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1584923939954">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921646887" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1584921646888">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584923939954" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1584923939954">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584921646888" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584923939954" />
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1584922924067">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-1920.116.1920.1040@0.0.2560.1400" timestamp="1584922924067" />
     <state x="936" y="330" width="672" height="677" key="run.anything.popup" timestamp="1584920623622">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

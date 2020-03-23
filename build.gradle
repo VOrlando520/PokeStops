@@ -40,7 +40,8 @@ repositories {
 }
 
 dependencies {
-    compile 'org.spongepowered:spongeapi:7.1.0-SNAPSHOT'
+    compile 'org.spongepowered:spongeforge:1.12.2-2768-7.1.4:dev'
+    compileOnly fileTree(dir: "libs", include: "[*.jar]")
 }
 
 
