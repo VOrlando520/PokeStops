@@ -1,19 +1,16 @@
 package pokestops.andwhat5.config;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gson.annotations.Expose;
-
-public class PlayerStruc
-{
-	public PlayerStruc()
-	{
-		PlayerData = new ArrayList<>();
-	}
-
+public class PlayerStruc {
+	public static PlayerStruc gcon = new PlayerStruc();
 	@Expose
 	public List<PlayerPokeStopStruc> PlayerData;
 
-	public static PlayerStruc gcon = new PlayerStruc();
+	public PlayerStruc() {
+		PlayerData = new ArrayList<>();
+	}
 }

@@ -3,21 +3,14 @@ package pokestops.andwhat5;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.command.args.GenericArguments;
 import org.spongepowered.api.command.spec.CommandSpec;
+import org.spongepowered.api.item.ItemType;
 import org.spongepowered.api.text.Text;
-
-import pokestops.andwhat5.commands.ExecutorAddDrop;
-import pokestops.andwhat5.commands.ExecutorAddPokeStop;
-import pokestops.andwhat5.commands.ExecutorClaimPokeStop;
-import pokestops.andwhat5.commands.ExecutorDelDrop;
-import pokestops.andwhat5.commands.ExecutorDelPokeStop;
-import pokestops.andwhat5.commands.ExecutorDropList;
+import pokestops.andwhat5.commands.*;
 import pokestops.andwhat5.enums.EnumPokeStopType;
 
-public class CommandRegistry
-{
+public class CommandRegistry {
 
-	public static void registerCommands()
-	{
+	public static void registerCommands() {
 		CommandSpec p = CommandSpec.builder().permission("pokestops.addpokestop.base")
 				.arguments(GenericArguments.enumValue(Text.of("tier"), EnumPokeStopType.class))
 				.executor(new ExecutorAddPokeStop()).build();
@@ -34,13 +27,13 @@ public class CommandRegistry
 
 		CommandSpec p3 = CommandSpec.builder().permission("pokestops.adddrop.base")
 				.arguments(GenericArguments.enumValue(Text.of("tier"), EnumPokeStopType.class),
-						GenericArguments.string(Text.of("item")), GenericArguments.integer(Text.of("rarity")))
+						   GenericArguments.catalogedElement(Text.of("item"), ItemType.class), GenericArguments.integer(Text.of("rarity")))
 				.executor(new ExecutorAddDrop()).build();
 		Sponge.getCommandManager().register(PokeStops.getInstance(), p3, "adddrop");
 
 		CommandSpec p4 = CommandSpec.builder().permission("pokestops.deldrop.base")
 				.arguments(GenericArguments.enumValue(Text.of("tier"), EnumPokeStopType.class),
-						GenericArguments.string(Text.of("item")))
+						   GenericArguments.catalogedElement(Text.of("item"), ItemType.class))
 				.executor(new ExecutorDelDrop()).build();
 		Sponge.getCommandManager().register(PokeStops.getInstance(), p4, "deldrop");
 

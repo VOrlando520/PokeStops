@@ -1,23 +1,15 @@
 package pokestops.andwhat5.config;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.annotations.Expose;
 
 /**
  * PixelmonEnv Created by AnDwHaT5.
  */
-public class ConfigStruc
-{
-	public ConfigStruc()
-	{
-		locations = new ArrayList<>();
-		tier1 = new ArrayList<>();
-		tier2 = new ArrayList<>();
-		tier3 = new ArrayList<>();
-	}
-
+public class ConfigStruc {
+	public static ConfigStruc gcon = new ConfigStruc();
 	@Expose
 	public List<PokeStopStruc> locations;
 
@@ -30,5 +22,10 @@ public class ConfigStruc
 	@Expose
 	public List<ItemStruc> tier3;
 
-	public static ConfigStruc gcon = new ConfigStruc();
+	public ConfigStruc() {
+		locations = new ArrayList<>();
+		tier1 = new ArrayList<>();
+		tier2 = new ArrayList<>();
+		tier3 = new ArrayList<>();
+	}
 }

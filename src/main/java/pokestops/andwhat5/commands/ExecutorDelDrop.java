@@ -1,86 +1,42 @@
 package pokestops.andwhat5.commands;
 
+import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;
 import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.command.args.CommandContext;
 import org.spongepowered.api.command.spec.CommandExecutor;
-
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
+import org.spongepowered.api.item.ItemType;
+import org.spongepowered.api.text.Text;
+import org.spongepowered.api.text.format.TextColors;
+import org.spongepowered.api.util.annotation.NonnullByDefault;
 import pokestops.andwhat5.config.Utilities;
 import pokestops.andwhat5.enums.EnumPokeStopType;
 
-public class ExecutorDelDrop implements CommandExecutor
-{
+@NonnullByDefault
+public class ExecutorDelDrop implements CommandExecutor {
 
+	@SuppressWarnings("OptionalGetWithoutIsPresent")
 	@Override
-	public CommandResult execute(CommandSource src, CommandContext args)
-			throws org.spongepowered.api.command.CommandException
-	{
-
-		if (args.getOne("tier").get().equals(EnumPokeStopType.tier1))
-		{
-			if (Utilities.tierContains(EnumPokeStopType.tier1, args.getOne("item").get().toString()))
-			{
-				Utilities.removeFromTier(EnumPokeStopType.tier1, args.getOne("item").get().toString());
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "Successfully removed " + TextFormatting.LIGHT_PURPLE
-						+ args.getOne("item").get().toString() + TextFormatting.AQUA + " from the item pool."));
-			} else
-			{
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "This item is not in the tier 1 item pool."));
-			}
-		} else if (args.getOne("tier").get().equals(EnumPokeStopType.tier2))
-		{
-			if (Utilities.tierContains(EnumPokeStopType.tier2, args.getOne("item").get().toString()))
-			{
-				Utilities.removeFromTier(EnumPokeStopType.tier2, args.getOne("item").get().toString());
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "Successfully removed " + TextFormatting.LIGHT_PURPLE
-						+ args.getOne("item").get().toString() + TextFormatting.AQUA + " from the item pool."));
-			} else
-			{
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "This item is not in the tier 2 item pool."));
-			}
-		} else if (args.getOne("tier").get().equals(EnumPokeStopType.tier3))
-		{
-			if (Utilities.tierContains(EnumPokeStopType.tier3, args.getOne("item").get().toString()))
-			{
-				Utilities.removeFromTier(EnumPokeStopType.tier3, args.getOne("item").get().toString());
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "Successfully removed " + TextFormatting.LIGHT_PURPLE
-						+ args.getOne("item").get().toString() + TextFormatting.AQUA + " from the item pool."));
-			} else
-			{
-				((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-						+ TextFormatting.AQUA + "This item is not in the tier 3 item pool."));
-			}
-		} else
-		{
-			((EntityPlayerMP) src).sendMessage(new TextComponentString(TextFormatting.LIGHT_PURPLE + "[PokeStops] "
-					+ TextFormatting.AQUA + "You have specified an invalid or nonexistant tier."));
+	public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
+		EnumPokeStopType tier = args.<EnumPokeStopType>getOne("tier").get();
+		ItemType itemType = args.<ItemType>getOne("item").get();
+		switch (tier) {
+			case tier1:
+			case tier2:
+			case tier3:
+				break;
+			default:
+				throw new CommandException(Text.of(TextColors.LIGHT_PURPLE, "[PokeStops] ",
+												   TextColors.AQUA, "You have specified an invalid or nonexistant tier."));
 		}
-
-		/*
-		 * if (sender instanceof EntityPlayerMP) { EntityPlayerMP p = (EntityPlayerMP)
-		 * sender; if (args.length == 1) { try {
-		 * if(ConfigStruc.gcon.drops.contains(args[0])) {
-		 * ConfigStruc.gcon.drops.remove(args[0]); PokestopConfig.save();
-		 * sender.sendMessage( new TextComponentString(TextFormatting.LIGHT_PURPLE +
-		 * "[Pokestops] " + TextFormatting.AQUA + "Successfully removed " + args[0] +
-		 * " from the Pokestops item pool!")); } else { sender.sendMessage( new
-		 * TextComponentString(TextFormatting.LIGHT_PURPLE + "[Pokestops] " +
-		 * TextFormatting.RED + args[0] + " was not in the pokestops pool.")); }
-		 * 
-		 * } catch (FileNotFoundException f) {
-		 * 
-		 * } } else { sender.sendMessage(new TextComponentString(
-		 * TextFormatting.LIGHT_PURPLE + "[Pokestops] " + TextFormatting.AQUA +
-		 * getUsage(sender))); } }
-		 */
+		if (Utilities.tierContains(tier, itemType.getId())) {
+			Utilities.removeFromTier(tier, itemType.getId());
+			src.sendMessage(Text.of(TextColors.LIGHT_PURPLE, "[PokeStops] ", TextColors.AQUA,
+									"Successfully removed ", TextColors.LIGHT_PURPLE, itemType, TextColors.AQUA, " from the item pool."));
+		} else {
+			throw new CommandException(Text.of(TextColors.LIGHT_PURPLE, "[PokeStops] ",
+											   TextColors.AQUA, "This item is not in the ", tier, " item pool."));
+		}
 		return CommandResult.success();
 	}
 }

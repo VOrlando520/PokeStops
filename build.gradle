@@ -1,58 +1,49 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            url = "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
 
-plugins {
-    id 'org.spongepowered.plugin' version '0.8.1'
-}
-
 apply plugin: 'net.minecraftforge.gradle.forge'
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'java'
 
-version = "1.12.2-2.0.3"
-group = "pokestops.andwhat5" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "PokéStops"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-sourceCompatibility = targetCompatibility = 1.8
-compileJava {
-    sourceCompatibility = targetCompatibility = 1.8
-}
+version = "1.12.2-2.0.4"
+group = "pokestops.andwhat5"
+archivesBaseName = "PokeStops"
+
 
 minecraft {
-    version = "1.12.2-14.23.4.2705"
-    runDir = "run"
-    mappings = "snapshot_20171007"
-    useDepAts = true
+    version = "1.12.2-14.23.5.2809"
+    mappings = 'snapshot_20171003'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'Sponge maven repo'
+        url 'http://repo.spongepowered.org/maven'
+    }
+    maven { url 'https://jitpack.io'}
 }
 
 dependencies {
     compile 'org.spongepowered:spongeapi:7.1.0-SNAPSHOT'
-    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
-    compile fileTree(dir: '../../libs', include: '*.jar')
 }
 
-processResources
-{
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
 
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-
-    // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
